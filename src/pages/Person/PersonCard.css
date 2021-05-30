@@ -1,0 +1,115 @@
+body {
+  background-color: #28223f;
+}
+
+.divCard {
+  background-color: #1d1931;
+  width: 380px;
+  border-radius: 10px;
+  text-align: center;
+  color: #8ca6c8;
+  position: relative;
+  margin: 20px auto 0;
+}
+.divCard .Cardspan {
+  background: yellow;
+  position: absolute;
+  top: 20px;
+  left: 40px;
+  color: #471d37;
+  padding: 5px;
+}
+.cardImg {
+  margin-top: 30px;
+  width: 100px;
+  border-radius: 50px;
+  border: 3px solid #03bfcb;
+}
+.buttonDiv button {
+  background-color: #03bfcb;
+  border: 1px solid #03bfcb;
+  width: 120px;
+  height: 50px;
+  margin-left: 20px;
+  border-radius: 2px;
+  color: #471d37;
+  transition: transform 250ms;
+}
+.buttonDiv :hover {
+  background: transparent;
+  transform: translateY(-10px);
+}
+.buttonDiv .follow {
+  background: transparent;
+  color: #03bfcb;
+  transition: transform 250ms;
+}
+
+.follow:hover {
+  background-color: #03bfcb;
+  transform: translateY(-10px);
+}
+.cardInterface {
+  font-size: 18px;
+  line-height: 35px;
+}
+
+.cardSkills {
+  background-color: #16112e;
+  border-radius: 5px;
+  margin-top: 30px;
+  /* height: 150px; */
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.cardSkills p {
+  padding: 5px 35px 5px 15px;
+  color: #08408a;
+  border: 1px solid grey;
+  text-decoration: none;
+  margin-left: 15px;
+  line-height: 30px;
+  border-radius: 5px;
+
+  background: #03bfcb;
+
+  box-shadow: inset 10px 10px 19px #b3b3b3, inset -10px -10px 19px #ffffff;
+  cursor: pointer;
+  transition: transform 250ms;
+}
+
+h6 {
+  margin: 15px 0 0;
+  text-align: left;
+  padding: 15px 15px 0;
+}
+
+a {
+  text-decoration: none;
+  color: #4b6281;
+  font-size: 16px;
+}
+a:focus {
+  color: #8ca6c8;
+}
+.cardSkills p:hover {
+  transform: translateY(-10px);
+}
+
+.backButton {
+  position: relative;
+  margin-left: 550px;
+  top: -50px;
+  padding: 10px;
+  color: #08408a;
+  font-size: 15px;
+  background: #89dee4;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: transform 250ms;
+}
+
+.backButton:hover {
+  transform: translateY(-10px);
+}
