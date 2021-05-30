@@ -45,7 +45,7 @@
 @media screen and (max-width: 600px) {
     .search-input{
         /* padding: 0px; */
-        margin-left: 0px;
+        margin-left: 10px;
         width: 350px;
     }
    .main-container{
