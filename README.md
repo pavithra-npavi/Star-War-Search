@@ -1,9 +1,29 @@
+
+
+Screenshots of work done: 
 <p align="center">
+
+  <img src="https://github.com/pavithra-npavi/UrbanPiperAssignment/blob/main/public/HomePage.png?raw=true" alt="homepage" width="506">
+  <br/>
+   Home Page
+ </p>
+    <p align="center">
+  <img src="https://github.com/pavithra-npavi/UrbanPiperAssignment/blob/main/public/Searching.png?raw=true" alt="searching" width="506">
+  <br/>
+  Searching 
+  </p>
+     <p align="center"> 
+  <img src="https://github.com/pavithra-npavi/UrbanPiperAssignment/blob/main/public/PersonCard.png?raw=true" alt="person card" width="506">
+  <br/>
+  Person Card</p>
+
+ <p align="center">
   <img src="https://s3-ap-southeast-1.amazonaws.com/asia.urbanpiper.com/static/frontend/images/logo.svg" alt="UrbanPiper" width="226">
 </p>
 
-<p align="center">A Short Assignment for Frontend Engineers</p>
-
+<p align="center">A Short Assignment for Frontend Engineers</p>                                                                                                                             
+                                                                                                                                      
+                                                                                                                                      
 ## Why an assignment?
 We believe that the best way to understand the capability of a programmer is to see their work. 
 Moreover, "work" is not just about how you can string together a bunch of nifty statements to produce a desired result—it encompasses the thought you put in to structure your application, the effort you put in to write out comments in your code and commits to help your collaborators, 
