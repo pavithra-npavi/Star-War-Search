@@ -6,7 +6,7 @@ function useFetch (url){
     const [isLoading, setIsloading] = useState(false)
     const [isError, setIsError] = useState(false)
     const [data, setData] = useState([])
-    console.log(data ,"fetched data ");
+    // console.log(data ,"fetched data ");
 
     //fetching data from api using name 
     const getRequest=()=>{

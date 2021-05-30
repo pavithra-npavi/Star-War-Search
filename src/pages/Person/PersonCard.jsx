@@ -1,12 +1,15 @@
 import React from "react";
 import { useHistory } from "react-router";
 import "./PersonCard.css";
+
+
+
 const PersonCard = ({ item }) => {
-    const history = useHistory()
+  const history = useHistory();
   var srcImg = "";
-  const handleClick =() =>{
-      history.push("/")
-  }
+  const handleClick = () => {
+    history.push("/");
+  };
 
   if (item.gender == "male") {
     srcImg =
@@ -66,11 +69,16 @@ const PersonCard = ({ item }) => {
           <div className="buttonDiv">
             <button>
               {" "}
-              <a href={item.films}>Films</a>{" "}
+              <a href={item.films[0]} target="_blank">
+                Films
+              </a>{" "}
             </button>
             <button className="follow">
               {" "}
-              <a href={item.species}> Species</a>
+              <a href={item.species[0]} target="_blank">
+                {" "}
+                Species
+              </a>
             </button>
             <h6>SPECIFICATION</h6>
           </div>
@@ -88,18 +96,20 @@ const PersonCard = ({ item }) => {
             <p> 🐾 {item.birth_year}</p>
             <br />
             <p>Links to Starships && Vehicles ⬇️ </p>
-            <a href={item.starships}>
+            <a href={item.starships[0]} target="_blank">
               {" "}
               <p> Star Ships </p>
             </a>
 
-            <a href={item.vehicles}>
+            <a href={item.vehicles[0]} target="_blank">
               {" "}
               <p> Vehicles </p>
             </a>
           </div>
         </div>
-        <button onClick={handleClick} className="backButton">HOME PAGE</button>
+        <button onClick={handleClick} className="backButton">
+          HOME PAGE
+        </button>
       </div>
     </>
   );

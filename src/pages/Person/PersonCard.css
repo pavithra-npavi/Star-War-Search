@@ -71,9 +71,7 @@ body {
   margin-left: 15px;
   line-height: 30px;
   border-radius: 5px;
-
   background: #03bfcb;
-
   box-shadow: inset 10px 10px 19px #b3b3b3, inset -10px -10px 19px #ffffff;
   cursor: pointer;
   transition: transform 250ms;
@@ -89,6 +87,7 @@ a {
   text-decoration: none;
   color: #4b6281;
   font-size: 16px;
+  cursor: pointer;
 }
 a:focus {
   color: #8ca6c8;
@@ -108,8 +107,18 @@ a:focus {
   cursor: pointer;
   border-radius: 5px;
   transition: transform 250ms;
+  width: 150px;
 }
 
 .backButton:hover {
   transform: translateY(-10px);
+}
+
+
+@media screen and (max-width: 600px) {
+  
+  .backButton{
+    left: -400px;
+    top: 10px;
+  }
 }

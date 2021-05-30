@@ -11,16 +11,14 @@ function Person() {
     `https://swapi.dev/api/people/?search=${debouncedQuery || "luke"}`
   );
 
-  console.log(id)
-  console.log("data",data)
+
   return (
     <div className="person">
-      {/* <h1>Luke Skywalker</h1> */}
-      {/* <h1> hey !!!</h1> */}
-      <div id="container">
+       <div id="container">
             {isLoading ? (
               <div> 
-                <img src="Spinner.gif" alt="loader" style={{backgroundColor:"transparent" , marginLeft:"230px", height:"50px"}}/>
+                Loading.....
+                {/* <img src="Spinner.gif" alt="loader" style={{backgroundColor:"transparent" , marginLeft:"230px", height:"50px"}}/> */}
               </div>
             ) : isError ? (
               <div> Error... </div>

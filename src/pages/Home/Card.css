@@ -1,21 +1,12 @@
-/* .card_container{
-    width:500px;
-    max-height: 150px;
-  display: flex;
-  position: realtive;
-margin-left: 80px;
-  color:grey;
-padding-left: 8px;
-font-size: 20px;
-border-radius: 30px;
-}  */
+.card_container{
+      max-height: 50px;
+     padding-left: 70px;
+} 
 .card_container:hover{
      color: white;
      cursor: pointer;
      background: rgb(24, 23, 23);
-     
 } 
-
 .search-icon {
   position: relative;
   height: 20px;
@@ -40,4 +31,17 @@ border-radius: 30px;
   top: -100px;
   left: 390px;
   width: 50px;
+}
+
+@media screen and (max-width: 600px) {
+  
+  .search-icon{
+    left: 340px;
+  }
+  .loader-icon{
+    left: 300px;
+  }
+  .closer{
+    left: 280px;
+  }
 }

@@ -13,86 +13,46 @@ const SearchBarWrapper = styled.div`
   width: 550px;
   margin: auto;
   border-bottom: none;
-  max-height: 500px;
 `;
 
 const SuggestionBox = styled.div`
-  display: ${({ len }) => (len !== 0 ? "flex" : "none")};
   display: flex;
   flex-direction: column;
-  flex: 0 0 auto;
-  max-height: 250px;
-  overflow: auto;
-  /* border: 1px solid grey; */
-  /* border-top: none; */
+  /* overflow: scroll; */
+  height:1000vh;
   width: 580px;
-  /* margin: auto; */
-  margin-top: -70px;
-  margin-left: -20px;
+  /* margin-top: -70px;
+  margin-left: -20px; */
+  /* border:10px solid white; */
   & * {
     flex: 1;
     padding: 5px;
     text-align: left;
     padding-left: 30px;
-    height: 50px;
+    height: 80px;
   }
 `;
 
 function HomePage() {
   const [query, setQuery] = useState("");
-  const [active, setActive] = useState(0);
-  const scrollRef = useRef();
   const history = useHistory();
   const debouncedQuery = useDebouncer(query, 500);
 
-  
   const { isLoading, isError, data } = useFetch(
     `https://swapi.dev/api/people/?search=${debouncedQuery || "luke"}`
   );
 
- 
-
   const handleData = (url1) => {
-    console.log(url1);
+    // console.log(url1);
     history.push(`/person/${url1}`);
   };
 
   const handleClear = () => {
     setQuery("");
   };
-  
+
   const handleChange = (e) => {
     setQuery(e.target.value);
-  };
-
-  const handleChangeActiveSuggestions = (e) => {
-    console.log(e.keyCode, active);
-
-    switch (e.keyCode) {
-      case 40: {
-        setActive((prev) => prev + 1);
-        document.querySelector("#container").style.color = "red";
-        break;
-      }
-      case 38: {
-        if (active === 1) {
-          setActive(0);
-        } else if (active <= 0) {
-          setActive(data.length);
-        } else {
-          setActive((prev) => prev - 1);
-        }
-
-        break;
-      }
-      case 13: {
-        console.log("hey");
-        break;
-      }
-      default: {
-        return;
-      }
-    }
   };
 
   return (
@@ -102,7 +62,7 @@ function HomePage() {
           <img src={logo} alt="Star Wars Logo" />
         </div>
 
-        <SearchBarWrapper onKeyPress={handleChangeActiveSuggestions}>
+        <SearchBarWrapper>
           <div className="main-container">
             <input
               className="search-input"
@@ -134,12 +94,7 @@ function HomePage() {
           </div>
         </SearchBarWrapper>
 
-        <SuggestionBox
-          ref={scrollRef}
-          active={active}
-          len={data.length}
-          limit={6}
-        >
+        {/* <SuggestionBox> */}
           <div id="container">
             {isLoading ? (
               <div>
@@ -158,17 +113,11 @@ function HomePage() {
             ) : (
               data.results &&
               data.results?.map((item, index) => (
-                <Card
-                  key={item.url}
-                  onKeyUp={handleChangeActiveSuggestions}
-                  handleData={handleData}
-                  item={item}
-                  onMouseOver={() => setActive(index + 1)}
-                />
+                <Card key={item.url} handleData={handleData} item={item} />
               ))
             )}
           </div>
-        </SuggestionBox>
+        {/* </SuggestionBox> */}
       </div>
     </>
   );
