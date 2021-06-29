@@ -1,4 +1,4 @@
-
+Deployed Link : https://star-war-searchbar.netlify.app/
 
 Screenshots of work done: 
 <p align="center">
